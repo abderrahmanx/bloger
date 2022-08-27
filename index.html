@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" w content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/f0f632e4f7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body >
+  
+  <header >
+    <div class="toggle " onclick="">
+       <h1 class="toggle-header">Blogr</h1>
+ <a href="#" class="toggle-button">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+
+  </a>
+ 
+
+</div>
+<div class="mobile-list">
+<ul>
+ <span><i id="mobile-angel-down"  class="fas fa-angle-down" ></i></span>
+  <li class="product"> Product</li>
+  <div class="product-list">
+    <li>Overview </li>
+    <li>Pricing</li>
+    <li>Marketplace</li>
+    <li>  Features</li>
+    <li>Integrations</li>
+  </div>
+  <span><i id="mobile-angel-down1"   class="fas fa-angle-down" ></i></span>
+  <li class="company">Company</li>
+  <div class="companylist">
+  <li> About </li>
+  <li> Team</li>
+  <li> Blog</li>
+  <li> Careers  </li>
+</div>
+  <span><i  id="mobile-angel-down2"  class="fas fa-angle-down" ></i></span>
+  <li class="connect">  Connect</li>
+  <div class="connectlist">
+  <li>Contact </li>
+  <li> Newsletter</li>
+  <li>LinkedIn</li>
+  </div>
+  <span><i  id="mobile-angel-down3"  class="fas fa-angle-down" ></i></span>
+  <li class="login">Login</li>
+  <div class="loginlist">
+    <li>sign up</li>
+  </div>
+</ul>
+
+</div>
+<nav class="navigation">
+ 
+<ul>
+<li>
+  <h1 >Blogr</h1>
+</li>
+
+<li class="nav">
+ <a onclick="showlist();showdownarrow();hidelist1();hidelist2();showdownarrow3();showdownarrow5()" > Products</a>
+</li>
+<span onclick="showdownarrow();hidelist1();hidelist2();showdownarrow3();showdownarrow5()" ><i onclick="showlist()" id="angel-down"  class="fas fa-angle-down" ></i>
+</span>
+  <span onclick="showdownarrow1();">
+  <i id="angel-up" onclick="hidelist()" class="fas fa-angle-up"></i>
+</span>
+
+
+
+<li class="nav">
+ <a onclick="showlist1();showdownarrow2();hidelist();hidelist2();showdownarrow1();showdownarrow5()">Company</a> 
+</li>
+<span  onclick="showdownarrow2();hidelist();hidelist2();showdownarrow1();showdownarrow5()"><i id="angel-down1" onclick="showlist1()" class="fas fa-angle-down"></i></span>
+<span onclick="showdownarrow3()" ><i id="angel-up1"  onclick="hidelist1()" class="fas fa-angle-up"></i></span>
+<li class="nav">
+ <a onclick="showlist2();showdownarrow4();hidelist();hidelist1();showdownarrow3();showdownarrow1()">Connect</a> 
+</li>
+<span  onclick="showdownarrow4();hidelist();hidelist1();showdownarrow3();showdownarrow1()"><i id="angel-down2" onclick="showlist2()" class="fas fa-angle-down"></i></span>
+<span  onclick="showdownarrow5()"><i id="angel-up2" onclick="hidelist2()" class="fas fa-angle-up"></i></span>
+</ul>
+<ul class="log">
+  <li class="nav">Login</li>
+  <li class="sign">Sign Up</li>
+</ul>
+
+
+</nav>
+
+<div class="alllists" >
+ 
+ <ul id="sub-products">
+    <li>Overview </li>
+    <li>Pricing</li>
+    <li>Marketplace</li>
+    <li>  Features</li>
+    <li>Integrations</li>
+  </ul>
+   <ul id="sub-products1">
+    <li> About </li>
+    <li> Team</li>
+    <li> Blog</li>
+    <li> Careers  </li>
+   
+  </ul>
+  <ul id="sub-products2">
+    <li>Contact </li>
+    <li> Newsletter</li>
+    <li>LinkedIn</li>
+    
+  </ul> 
+
+</div>
+<script type="text/javascript">
+  const listdown1 = false;
+  function showlist(){
+  document.getElementById('sub-products').style.display='block';
+  }
+  function hidelist(){
+  document.getElementById('sub-products').style.display='none';
+  }
+  function showlist1(){
+  document.getElementById('sub-products1').style.display='block';
+  }
+  function hidelist1(){
+  document.getElementById('sub-products1').style.display='none';
+  }
+  function showlist2(){
+  document.getElementById('sub-products2').style.display='block';
+  }
+  function hidelist2(){
+  document.getElementById('sub-products2').style.display='none';
+  }
+ 
+  function showdownarrow(){
+
+  document.getElementById('angel-down').style.opacity='0'
+  document.getElementById('angel-down').style.zIndex='50'
+  document.getElementById('angel-up').style.opacity='1'
+  document.getElementById('angel-up').style.opacity='51'
+}
+
+function showdownarrow1()
+{ 
+  document.getElementById('angel-up').style.opacity='0'
+  document.getElementById('angel-up').style.zIndex='50'
+  document.getElementById('angel-down').style.opacity='1'
+  document.getElementById('angel-down').style.zIndex='51'
+}
+function showdownarrow2(){
+
+document.getElementById('angel-down1').style.opacity='0'
+document.getElementById('angel-down1').style.zIndex='50'
+document.getElementById('angel-up1').style.opacity='1'
+document.getElementById('angel-up1').style.opacity='51'
+}
+
+function showdownarrow3()
+{ 
+document.getElementById('angel-up1').style.opacity='0'
+document.getElementById('angel-up1').style.zIndex='50'
+document.getElementById('angel-down1').style.opacity='1'
+document.getElementById('angel-down1').style.zIndex='51'
+}
+function showdownarrow4(){
+
+document.getElementById('angel-down2').style.opacity='0'
+document.getElementById('angel-down2').style.zIndex='50'
+document.getElementById('angel-up2').style.opacity='1'
+document.getElementById('angel-up2').style.opacity='51'
+}
+
+function showdownarrow5()
+{ 
+document.getElementById('angel-up2').style.opacity='0'
+document.getElementById('angel-up2').style.zIndex='50'
+document.getElementById('angel-down2').style.opacity='1'
+document.getElementById('angel-down2').style.zIndex='51'
+}
+ 
+ 
+   const togglebutton= document.getElementsByClassName('toggle-button')[0]
+   const navlinks = document.getElementsByClassName('mobile-list')[0];
+const products= document.getElementsByClassName('product')[0];
+const productlist= document.getElementsByClassName('product-list')[0];
+const company = document.getElementsByClassName('company')[0];
+const companylist= document.getElementsByClassName('companylist')[0];
+const connect = document.getElementsByClassName('connect')[0];
+const connectlist= document.getElementsByClassName('connectlist')[0];
+const login = document.getElementsByClassName('login')[0];
+const loginlist= document.getElementsByClassName('loginlist')[0];
+
+togglebutton.addEventListener('click', () => {
+navlinks.classList.toggle('active')
+});
+products.addEventListener('click', () => {
+productlist.classList.toggle('show')
+products.classList.toggle('add')
+})
+company.addEventListener('click', () => {
+companylist.classList.toggle('show')
+company.classList.toggle('add')
+})
+connect.addEventListener('click', () => {
+connectlist.classList.toggle('show')
+connect.classList.toggle('add')
+})
+login.addEventListener('click', () => {
+loginlist.classList.toggle('show')
+login.classList.toggle('add')
+})
+  
+</script>
+<div onclick="hidelist1();hidelist();hidelist2()
+;showdownarrow1();showdownarrow3();showdownarrow5()" class="main-header">
+<h1>A modern publishing platform</h1>
+<p></p>Grow your audience and build your online brand</p>
+</div>
+<ul class="buttons">
+  <li class="start">Start for free</li>
+  <li class="learn">Learn more</li>
+</ul>
+
+</header>
+
+<div class="body-header"><h1>Designed for the future</h1></div>
+<div class="section1"><img src="illustration-editor-desktop.svg" alt="">
+
+<div class="text1">
+  <h2>Introducing an extensible editor</h2><p>
+  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.</p></div>
+  <div class="text1 " style="margin-top: 50px;"><h2>Robust content management</h2>
+    <p>
+    Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+    by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p></div>
+</div>
+
+<div class="section2">
+  <div style="overflow: hidden;">
+    <img src="bg-pattern-circles.svg" style=" margin-top: -20%; ">
+   </div>
+
+<div class="in-section2">
+  <div class="phones">
+<img src="illustration-phones.svg" >
+</div>
+<div class="text5">
+<h1>State of the Art Infrastructure</h1>
+<p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+</p>
+</div>
+</div>
+</div>
+<div class="section3"><img src="illustration-laptop-desktop.svg" alt="">
+
+  <div class="text2">
+    <h2>Free, open, simple</h2><p>
+      Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+      features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+      and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+    </p></div>
+    <div class="text2 " style="margin-top: 50px;"><h2>Powerful tooling</h2>
+      <p>
+        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+        capable of producing even the most complicated sites.
+      </p></div>
+  </div>
+
+  <footer>
+    
+    <ul>
+      <li class="footer-main-header">Blogr</li>
+    </ul>
+    <ul>
+      <li class="footer-headers">Product</li>
+      <li class="footer-links">Overview</li>
+      <li class="footer-links">Pricing</li>
+      <li class="footer-links">Marketplace</li>
+      <li class="footer-links">Features</li>
+      <li class="footer-links">Integrations</li>
+    </ul>
+    <ul>
+      <li class="footer-headers">Company</li>
+      <li class="footer-links">About</li>
+      <li class="footer-links">Team</li>
+      <li class="footer-links">Blog</li>
+      <li class="footer-links">Careers</li>
+    </ul>
+    <ul>
+      <li class="footer-headers">Connect</li>
+      <li class="footer-links">Contact</li>
+      <li class="footer-links">Newsletter</li>
+      <li class="footer-links">LinkedIn</li>
+    </ul>
+    
+  </footer><script src="sc.js" defer></script>
+  <!-- Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+
+  Contact
+  Newsletter
+  LinkedIn
+  
+  Login
+  Sign Up
+
+  A modern publishing platform
+  Grow your audience and build your online brand
+
+  Start for Free
+  Learn More
+
+  Designed for the future
+
+  Introducing an extensible editor
+  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.
+
+  Robust content management
+  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+
+  State of the Art Infrastructure
+  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+
+  Free, open, simple
+  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+
+  Powerful tooling
+  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.
+
+  Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+  
+  Contact
+  Newsletter
+  LinkedIn -->
+
+   <div class="attribution" style="background-color: hsl(240, 10%, 16%)
+   ;margin-top: -20px;padding-bottom: 20px;">
+    <div>challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></div> 
+    <div>Coded by <a href="#">Abderrahman</a></div>
+  </div>
+  
+</body>
+
+</html> 
